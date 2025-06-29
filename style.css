@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Genos:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+  font-family: "Genos", sans-serif;
+}
+
+/* -------------------------- Hero Section Starts Here ------------------------------------ */
+.herosection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* .bg-img img {
+  width: 100%;
+  height: auto;
+  filter: brightness(60%) contrast(90%) saturate(80%);
+} */
+
+.bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bg-img img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.overlay-text img {
+  width: 22%;
+  height: 22%;
+}
+
+.overlay-text p {
+  font-size: 23px;
+  letter-spacing: 2px;
+  color: #828071;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.btn {
+  color: #0f172a;
+  font-size: 18px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: 0.3s all ease;
+  background-color: #a6cd3b;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #EB1E22;
+  opacity: .8;
+}
+
+.btn-secondary:hover {
+  background-color: #EB1E22;
+  border: 1px solid transparent;
+  opacity: .8;
+
+}
+/* EB1E22 */
+.btn-primary {
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  background: radial-gradient(circle, #828071, #A6CD3B, #EF1C26);
+  background-size: 400% 400%;
+  animation: circularFlow 10s linear infinite;
+}
+
+.btn-secondary {
+  border: 1px solid transparent;
+  padding: 10px 30px;
+  background: radial-gradient(circle, #828071, #fff, #000);
+  background-size: 400% 400%;
+  animation: circularFlow 10s linear infinite;
+}
+
+
+.animated-gradient {
+  background: radial-gradient(circle, #828071, #A6CD3B, #EF1C26);
+  background-size: 400% 400%;
+  animation: circularFlow 10s linear infinite;
+}
+
+@keyframes circularFlow {
+  0% {
+    background-position: 50% 0%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+/* ---------------------------------- Hero section ends here ------------------------------------ */
+
+/* -------------------------------------- Know Us Section ----------------------------------------------- */
