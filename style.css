@@ -125,6 +125,75 @@ body {
     background-position: 50% 0%;
   }
 }
+
+/* -------------------- Responsive Queries ------------------------ */
+
+@media (max-width: 1024px) {
+  .overlay-text {
+    top: 12%;
+    left: 8%;
+  }
+
+  .overlay-text p {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay-text {
+    top: 10%;
+    left: 6%;
+  }
+
+  .overlay-text p {
+    font-size: 1.1rem;
+  }
+
+  .overlay-text img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+  .cta-btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-text {
+    top: 15%;
+    left: 5%;
+    width: 100%;
+  }
+
+  .overlay-text p {
+    font-size: 1rem;
+  }
+
+  .overlay-text img {
+  width: 100%;
+  max-width: 280px; /* or any size that works for your layout */
+  height: auto;
+}
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}
+
 /* ---------------------------------- Hero section ends here ------------------------------------ */
 
 /* -------------------------------------- Know Us Section ----------------------------------------------- */
