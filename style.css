@@ -150,10 +150,6 @@ body {
     left: 6%;
   }
 
-  .overlay-text p {
-    font-size: 1.1rem;
-  }
-
   .overlay-text img {
   width: 100%;
   max-width: 400px;
@@ -173,24 +169,29 @@ body {
 
 @media (max-width: 480px) {
   .overlay-text {
-    top: 15%;
+    top: 5%;
     left: 5%;
     width: 100%;
   }
 
-  .overlay-text p {
-    font-size: 1rem;
-  }
-
   .overlay-text img {
+    position: absolute;
   width: 100%;
-  max-width: 280px; /* or any size that works for your layout */
+  max-width: 170px; /* or any size that works for your layout */
   height: auto;
 }
 
   .btn {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
     font-size: 0.9rem;
     padding: 10px 15px;
+  }
+
+  .btn-primary{
+    position: absolute;
+    bottom: 17%;
   }
 }
 
