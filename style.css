@@ -133,7 +133,7 @@ body {
 
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 20px 15px;
+    padding: 16px 15px;
   }
   
   .navbar{
@@ -1443,8 +1443,7 @@ body {
   fill: none;
   stroke: #ffffff;
   stroke-width: 4;
-  stroke-dasharray: 175.929;
-  stroke-dashoffset: 175.929;
+  stroke-linecap: round;
   transition: stroke-dashoffset 0.3s linear;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
@@ -1469,8 +1468,6 @@ body {
     cx: 25;
     cy: 25;
     r: 23;
-    stroke-dasharray: 144.513;
-    stroke-dashoffset: 144.513;
   }
 }
 
@@ -1492,7 +1489,5 @@ body {
     cx: 22.5;
     cy: 22.5;
     r: 20.5;
-    stroke-dasharray: 128.805;
-    stroke-dashoffset: 128.805;
   }
 }
