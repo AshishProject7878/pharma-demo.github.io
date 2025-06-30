@@ -10,8 +10,22 @@
   <body>
     <div class="main">
       <!-- ---------------------------------------------- Hero Section ---------------------------------------- -->
-      <div class="navbar"></div>
-      <div class="herosection">
+      <!-- --------------------------------------------- Navbar Section --------------------------------------------------------- -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-container">
+    <div class="navbar-links">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#know-us" class="nav-link">Know Us</a>
+      <a href="#specialties" class="nav-link">Specialties</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>
+<!-- --------------------------------------------- Navbar Section Ends Here ---------------------------------------------- -->
+      <div class="herosection" id="home">
         <div class="bg-img">
           <img src="bg.jpg" alt="" />
         </div>
@@ -28,7 +42,7 @@
 
       <!-- ----------------------------------------- Know US section --------------------------------------------------------- -->
 
-      <section class="know-us">
+      <section class="know-us" id="know-us">
         <div class="know-us-container">
           <div class="know-us-images">
             <div class="image-box">
@@ -75,7 +89,7 @@
       </section>
       <!-- --------------------------------------------- Tape Section Ends Here ---------------------------------------------- -->
        <!-- --------------------------------------------- Specialties Section --------------------------------------------------------- -->
-      <section class="specialties-section">
+      <section class="specialties-section" id="specialties">
   <div class="specialties-container">
     <h2>Our Specialties</h2>
     <div class="specialties-grid">
@@ -115,7 +129,7 @@ Our global network and in-depth market knowledge allow us to navigate complex su
 </section>
 
 <!-- --------------------------------------------- Contact Section --------------------------------------------------------- -->
-<section class="contact-section">
+<section class="contact-section" id="contact">
   <div class="contact-container">
     <div class="section-header">
       <!-- <div class="subtitle">Get In Touch</div> -->
@@ -206,8 +220,41 @@ Our global network and in-depth market knowledge allow us to navigate complex su
   </div>
 </section>
 <!-- --------------------------------------------- Contact Section Ends Here ---------------------------------------------- -->
+ <!-- --------------------------------------------- Footer Section --------------------------------------------------------- -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h4>Zywie Worldwide</h4>
+        <p>Connecting global communities with innovative healthcare solutions.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#know-us" class="footer-link">Know Us</a>
+        <a href="#specialties" class="footer-link">Specialties</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+      <!-- <div class="footer-social">
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      </div> -->
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- --------------------------------------------- Go to Top Button --------------------------------------------------------- -->
+<button class="go-to-top" id="go-to-top" aria-label="Go to top of page">
+  <i class="fas fa-arrow-up"></i>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring-circle" cx="30" cy="30" r="28" />
+  </svg>
+</button>
+<!-- --------------------------------------------- Go to Top Button Ends Here ---------------------------------------------- -->
+<!-- --------------------------------------------- Footer Section Ends Here ---------------------------------------------- -->
 
-      <!-- --------------------------------------------- Specialties Section Ends Here ---------------------------------------------- -->
     </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
