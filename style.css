@@ -102,9 +102,6 @@ body {
   .navbar-links {
     display: none;
   }
-  .navbar{
-    width: 90%;
-  }
   .hamburger {
     display: block;
     position: absolute;
@@ -136,7 +133,11 @@ body {
 
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 25px 15px;
+    padding: 20px 15px;
+  }
+  
+  .navbar{
+    width: 96%;
   }
 
   .hamburger {
