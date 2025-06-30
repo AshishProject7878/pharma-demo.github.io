@@ -8,7 +8,7 @@
 body {
   background-color: #fff;
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 /* -------------------------- Hero Section Starts Here ------------------------------------ */
@@ -17,12 +17,6 @@ body {
   width: 100%;
   height: 100vh;
 }
-
-/* .bg-img img {
-  width: 100%;
-  height: auto;
-  filter: brightness(60%) contrast(90%) saturate(80%);
-} */
 
 .bg-img {
   position: absolute;
@@ -74,7 +68,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #EB1E22;
+  background-color: #EB1E22;
   opacity: .8;
 }
 
@@ -82,9 +76,8 @@ body {
   background-color: #EB1E22;
   border: 1px solid transparent;
   opacity: .8;
-
 }
-/* EB1E22 */
+
 .btn-primary {
   padding: 10px 15px;
   border: 1px solid transparent;
@@ -100,7 +93,6 @@ body {
   background-size: 400% 400%;
   animation: circularFlow 10s linear infinite;
 }
-
 
 .animated-gradient {
   background: radial-gradient(circle, #828071, #A6CD3B, #EF1C26);
@@ -126,85 +118,9 @@ body {
   }
 }
 
-/* -------------------- Responsive Queries ------------------------ */
-
-@media (max-width: 1024px) {
-  .overlay-text {
-    top: 12%;
-    left: 8%;
-  }
-
-  .overlay-text p {
-    font-size: 1.3rem;
-  }
-
-  .btn {
-    font-size: 0.95rem;
-    padding: 10px 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .overlay-text {
-    top: 10%;
-    left: 6%;
-  }
-
-  .overlay-text img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-
-  .cta-btns {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 480px) {
-  .overlay-text {
-    top: 5%;
-    left: 5%;
-  }
-
-  .overlay-text img {
-    position: absolute;
-    width: 100%;
-    max-width: 170px;
-    height: auto;
-  }
-
-  .btn {
-    position: absolute;
-    top: 18%;
-    left: 1% !important;
-    font-size: 0.9rem;
-    padding: 8px 12px;
-    width: auto;
-    max-width: 140px; /* ✅ Reduce width */
-  }
-
-  .btn-primary {
-    position: absolute;
-    top: 12%;
-    padding: 8px 12px;
-    width: auto;
-    max-width: 140px; /* ✅ Reduce width */
-  }
-}
-
-
-/* ---------------------------------- Hero section ends here ------------------------------------ */
 /* -------------------------- Know Us Section Starts Here ------------------------------------ */
 .know-us {
   padding: 80px 20px;
-  background: radial-gradient(circle, #f8f8f8, #e0e7c4, #f8f8f8);
   background-size: 400% 400%;
   animation: circularFlow 15s linear infinite;
   position: relative;
@@ -280,7 +196,7 @@ body {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
 }
 
@@ -336,8 +252,58 @@ body {
   color: #fff;
 }
 
+/* -------------------------- Tape Section Starts Here ------------------------------------ */
+.tape-section {
+  padding: 0;
+  overflow: hidden;
+  margin-top: -20px;
+  transform: skewX(-10deg); /* Slants the whole tape to the right */
+}
+
+.tape-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tape {
+  display: flex;
+  white-space: nowrap;
+  gap: 30px;
+  padding: 15px 0;
+  animation: scrollTape 30s linear infinite;
+}
+
+.tape span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #8BC34A, #FF5722, #FFC107);
+  background-size: 300% 300%;
+  animation: colorPulse 6s ease infinite;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
 /* -------------------- Responsive Queries ------------------------ */
 @media (max-width: 1024px) {
+  .overlay-text {
+    top: 12%;
+    left: 8%;
+  }
+
+  .overlay-text p {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+
   .know-us {
     padding: 60px 15px;
   }
@@ -358,15 +324,41 @@ body {
   .image-box img {
     height: 250px;
   }
+
+  .tape span {
+    font-size: 1.3rem;
+    padding: 8px 15px;
+  }
 }
 
 @media (max-width: 768px) {
+  .overlay-text {
+    top: 10%;
+    left: 6%;
+  }
+
+  .overlay-text img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
   .know-us {
     padding: 50px 15px;
   }
 
   .know-us-container {
-    flex-direction: column-reverse; /* Text box on top, images below */
+    flex-direction: column-reverse;
   }
 
   .know-us-images {
@@ -377,7 +369,7 @@ body {
   }
 
   .image-box {
-    min-width: 48%; /* Two images side by side, accounting for gap */
+    min-width: 48%;
     flex: 1;
   }
 
@@ -397,9 +389,44 @@ body {
   .know-us-text p {
     font-size: 1rem;
   }
+
+  .tape span {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
 }
 
 @media (max-width: 480px) {
+  .overlay-text {
+    top: 5%;
+    left: 5%;
+  }
+
+  .overlay-text img {
+    position: absolute;
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+  }
+
+  .btn {
+    position: absolute;
+    top: 18%;
+    left: 1% !important;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    width: auto;
+    max-width: 140px;
+  }
+
+  .btn-primary {
+    position: absolute;
+    top: 12%;
+    padding: 8px 12px;
+    width: auto;
+    max-width: 140px;
+  }
+
   .know-us {
     padding: 40px 10px;
   }
@@ -433,5 +460,188 @@ body {
     padding: 8px 15px;
     font-size: 0.9rem;
   }
+
+  .tape span {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
 }
-/* ---------------------------------- Know Us Section Ends Here ------------------------------------ */
+/* -------------------------------------- Services ----------------------------- */
+.specialties-section {
+  padding: 80px 20px;
+  background-size: 400% 400%;
+  animation: circularFlow 15s linear infinite;
+}
+
+.specialties-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.specialties-container h2 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #A6CD3B, #EF1C26);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(150px, auto);
+  gap: 20px;
+}
+
+/* Grid positioning for the layout 1 1 2 / 3 4 5 / 3 6 6 */
+.specialties-grid .specialty-card:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.specialties-grid .specialty-card:nth-child(2) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.specialties-grid .specialty-card:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+.specialties-grid .specialty-card:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.specialties-grid .specialty-card:nth-child(5) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.specialties-grid .specialty-card:nth-child(6) {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+.specialty-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.specialty-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.specialty-card i {
+  font-size: 2.5rem;
+  color: #EF1C26;
+  margin-bottom: 15px;
+}
+
+.specialty-card h3 {
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.specialty-card p {
+  font-size: 1.1rem;
+  color: #828071;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* -------------------- Responsive Queries ------------------------ */
+
+@media (max-width: 1024px) {
+  .specialties-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+  }
+
+  .specialties-grid .specialty-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specialties-container h2 {
+    font-size: 2rem;
+  }
+
+  .specialty-card {
+    padding: 15px;
+  }
+
+  .specialty-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .specialty-card p {
+    font-size: 0.95rem;
+  }
+
+  .specialty-card i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .specialties-section {
+    padding: 40px 10px;
+  }
+
+  .specialties-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .specialty-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .specialty-card p {
+    font-size: 0.9rem;
+  }
+
+  .specialty-card i {
+    font-size: 1.8rem;
+  }
+}
+
+/* Optional gradient animation */
+@keyframes circularFlow {
+  0% {
+    background-position: 50% 0%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
