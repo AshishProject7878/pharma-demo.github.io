@@ -370,16 +370,20 @@ body {
   }
 
   .know-us-images {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
+    width: 100%;
   }
 
   .image-box {
-    min-width: 100%;
+    min-width: 48%; /* Two images side by side, accounting for gap */
+    flex: 1;
   }
 
   .image-box img {
     height: 220px;
+    width: 100%;
   }
 
   .know-us-text {
@@ -402,6 +406,10 @@ body {
 
   .know-us-container {
     gap: 20px;
+  }
+
+  .know-us-images {
+    gap: 8px;
   }
 
   .image-box img {
