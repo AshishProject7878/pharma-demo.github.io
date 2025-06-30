@@ -29,3 +29,47 @@ gsap.to(tape, {
     },
   },
 });
+
+document.getElementById('hamburger').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('.navbar-links').classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-link').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      if (window.innerWidth <= 968) {
+        document.querySelector('.navbar-links').classList.remove('active');
+        document.getElementById('hamburger').classList.remove('active');
+      }
+    }
+  });
+});
+
+const goToTopBtn = document.getElementById('go-to-top');
+const ring = document.querySelector('.progress-ring-circle');
+
+function updateProgress() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollFraction = scrollTop / docHeight;
+  const circumference = ring.getAttribute('r') * 2 * Math.PI;
+  const offset = circumference - scrollFraction * circumference;
+  ring.style.strokeDashoffset = offset;
+
+  if (scrollTop > 100) {
+    goToTopBtn.classList.add('visible');
+  } else {
+    goToTopBtn.classList.remove('visible');
+  }
+}
+
+goToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', updateProgress);
