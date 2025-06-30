@@ -56,11 +56,24 @@ const ring = document.querySelector('.progress-ring-circle');
 function updateProgress() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollFraction = scrollTop / docHeight;
-  const circumference = ring.getAttribute('r') * 2 * Math.PI;
+  const scrollFraction = docHeight > 0 ? Math.min(scrollTop / docHeight, 1) : 0;
+  
+  // Dynamically get the radius from the circle element
+  const radius = parseFloat(ring.getAttribute('r'));
+  const circumference = 2 * Math.PI * radius;
+  
+  // Set stroke-dasharray and initial stroke-dashoffset only once
+  if (!ring.dataset.initialized) {
+    ring.style.strokeDasharray = circumference;
+    ring.style.strokeDashoffset = circumference;
+    ring.dataset.initialized = 'true';
+  }
+  
+  // Update stroke-dashoffset based on scroll position
   const offset = circumference - scrollFraction * circumference;
   ring.style.strokeDashoffset = offset;
 
+  // Show/hide button based on scroll position
   if (scrollTop > 100) {
     goToTopBtn.classList.add('visible');
   } else {
@@ -68,8 +81,21 @@ function updateProgress() {
   }
 }
 
+// Update progress ring on resize to handle radius changes
+function handleResize() {
+  const radius = parseFloat(ring.getAttribute('r'));
+  const circumference = 2 * Math.PI * radius;
+  ring.style.strokeDasharray = circumference;
+  ring.style.strokeDashoffset = circumference;
+  updateProgress();
+}
+
 goToTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 window.addEventListener('scroll', updateProgress);
+window.addEventListener('resize', handleResize);
+
+// Initial call to set up progress ring
+handleResize();
