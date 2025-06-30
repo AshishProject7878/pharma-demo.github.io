@@ -102,7 +102,9 @@ body {
   .navbar-links {
     display: none;
   }
-
+  .navbar{
+    width: 90%;
+  }
   .hamburger {
     display: block;
     position: absolute;
