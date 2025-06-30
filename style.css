@@ -201,5 +201,229 @@ body {
 
 
 /* ---------------------------------- Hero section ends here ------------------------------------ */
+/* -------------------------- Know Us Section Starts Here ------------------------------------ */
+.know-us {
+  padding: 80px 20px;
+  background: radial-gradient(circle, #f8f8f8, #e0e7c4, #f8f8f8);
+  background-size: 400% 400%;
+  animation: circularFlow 15s linear infinite;
+  position: relative;
+  overflow: hidden;
+}
 
-/* -------------------------------------- Know Us Section ----------------------------------------------- */
+.know-us-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.know-us-images {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  min-width: 280px;
+}
+
+.image-box {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  min-width: 45%;
+}
+
+.image-box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-box:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay span {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.know-us-text {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.know-us-text:hover {
+  transform: translateY(-8px);
+}
+
+.know-us-text h2 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #A6CD3B, #EF1C26);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.know-us-text p {
+  font-size: 1.2rem;
+  color: #828071;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.know-us-text .animated-btn {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.know-us-text .animated-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #EB1E22;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.know-us-text .animated-btn:hover::before {
+  left: 0;
+}
+
+.know-us-text .animated-btn:hover {
+  color: #fff;
+}
+
+/* -------------------- Responsive Queries ------------------------ */
+@media (max-width: 1024px) {
+  .know-us {
+    padding: 60px 15px;
+  }
+
+  .know-us-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .know-us-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .know-us-text p {
+    font-size: 1.1rem;
+  }
+
+  .image-box img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .know-us {
+    padding: 50px 15px;
+  }
+
+  .know-us-container {
+    flex-direction: column-reverse; /* Text box on top, images below */
+  }
+
+  .know-us-images {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-box {
+    min-width: 100%;
+  }
+
+  .image-box img {
+    height: 220px;
+  }
+
+  .know-us-text {
+    padding: 20px;
+  }
+
+  .know-us-text h2 {
+    font-size: 2rem;
+  }
+
+  .know-us-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .know-us {
+    padding: 40px 10px;
+  }
+
+  .know-us-container {
+    gap: 20px;
+  }
+
+  .image-box img {
+    height: 180px;
+  }
+
+  .image-overlay span {
+    font-size: 1.1rem;
+  }
+
+  .know-us-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .know-us-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .know-us-text .animated-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+/* ---------------------------------- Know Us Section Ends Here ------------------------------------ */
