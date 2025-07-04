@@ -111,37 +111,37 @@ const tabButtons = document.querySelectorAll(".specialties-categories button");
     const tabData = [
       {
         title: "Merchant Exports",
-        img: "img/export.jpg",
+        img: "export.jpg",
         desc: "The success of a pharmaceutical product depends on the quality of sourced goods. At Zywie, we export pharma products with utmost care and compliance.",
         features: ["GDP-compliant shipping", "Cold chain management", "Reliable global delivery"]
       },
       {
         title: "Technical Support",
-        img: "img/technical.jpg",
+        img: "technical.jpg",
         desc: "Our experienced technical team provides assistance in regulatory documents, product information, and export procedures tailored to pharma needs.",
         features: ["Regulatory compliance support", "Stability documentation guidance", "Global pharmacopoeia understanding"]
       },
       {
         title: "Trading",
-        img: "img/trading.jpg",
+        img: "trading.jpg",
         desc: "Years of experience in pharmaceutical trading taught us the importance of market insight, demand forecasting, and authentic sourcing.",
         features: ["Validated supply chain", "Pharma-grade sourcing", "Market-specific solutions"]
       },
       {
         title: "Indenting",
-        img: "img/indent.jpg",
+        img: "indent.jpg",
         desc: "We help global buyers procure pharmaceuticals from trusted Indian manufacturers by handling indent orders and documentation seamlessly.",
         features: ["Transparent order processing", "Global buyer coordination", "Customs & compliance handling"]
       },
       {
         title: "Strategic Sourcing",
-        img: "img/strategic.jpg",
+        img: "strategic.jpg",
         desc: "We ensure strategic sourcing of pharma formulations based on region-specific regulations, pricing strategy, and product registration timelines.",
         features: ["Region-specific sourcing", "WHO-GMP product alignment", "Regulatory roadmap planning"]
       },
       {
         title: "Facilitating Contract",
-        img: "img/contract.jpg",
+        img: "contract.jpg",
         desc: "We bridge global partners through transparent agreements for pharma trade, reducing ambiguity and enhancing mutual trust.",
         features: ["B2B pharma contracts", "Quality & pricing transparency", "Flexible negotiation terms"]
       }
