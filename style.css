@@ -304,6 +304,10 @@ body {
     padding: 10px 20px;
     width: fit-content;
   }
+
+  .btn-secondary{
+    top: 30%;
+  }
 }
 
 
