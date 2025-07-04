@@ -133,7 +133,7 @@ body {
 
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 16px 15px;
+    padding: 30px 15px;
   }
   
   .navbar{
