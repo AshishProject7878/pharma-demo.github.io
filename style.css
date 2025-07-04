@@ -281,8 +281,11 @@ body {
   }
 
   .overlay-text {
-    top: 10%;
+    top: 30%; /* Increased from 10% to 30% to push it lower */
     left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .overlay-text img {
@@ -292,14 +295,14 @@ body {
 
   .cta-btns {
     flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 12px;
+    margin-top: 20px;
   }
 
   .btn {
-    width: fit-content;
     font-size: 16px;
-    padding: 8px 16px;
+    padding: 10px 20px;
+    width: fit-content;
   }
 }
 
