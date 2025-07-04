@@ -597,9 +597,9 @@ body {
 /* -------------------------------------- Services ----------------------------- */
 .specialties-section .know-sub-title{
   margin-bottom: 50px;
-  font-weight: bolder;
-      letter-spacing: 2px;
-
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1.2;
 }
 .specialties-section {
       background: #ffffff;
@@ -996,8 +996,9 @@ body {
     flex-direction: column;
   }
 
-  .form-title {
-    font-size: 1.6rem;
+  .section-header .know-sub-title{
+    line-height: 1.2;
+    letter-spacing: 2px;
   }
 
   .submit-btn {
