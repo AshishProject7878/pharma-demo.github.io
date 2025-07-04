@@ -133,7 +133,7 @@ body {
 
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 16px 15px;
+    padding: 25px 15px;
   }
   
   .navbar{
@@ -586,7 +586,7 @@ body {
   }
 
   .btn-secondary{
-    top: 30%; 
+    top: 25%; 
   }
 
   .tape span {
