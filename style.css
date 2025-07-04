@@ -404,7 +404,7 @@ body {
   .know-sub-title {
   font-size: 40px;
   margin-top: 20px;
-  line-height: 35px; /* tighter line spacing */
+  line-height: 1.2; /* tighter line spacing */
   text-align: left;
   margin-bottom: 20px;
 }
