@@ -407,6 +407,7 @@ body {
   line-height: 1.2; /* tighter line spacing */
   text-align: left;
   margin-bottom: 20px;
+    font-weight: bold;
 }
 
 
@@ -956,6 +957,7 @@ body {
 
   .section-header .know-sub-title{
   line-height: 1.2;
+    font-weight: 500;
 }
 
   .submit-btn {
