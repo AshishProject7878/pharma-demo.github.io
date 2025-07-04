@@ -954,9 +954,9 @@ body {
     flex-direction: column;
   }
 
-  .form-title {
-    font-size: 1.6rem;
-  }
+  .section-header .know-sub-title{
+  line-height: 2;
+}
 
   .submit-btn {
     width: 100%;
