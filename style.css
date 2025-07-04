@@ -140,7 +140,7 @@ body {
     width: 96%;
   }
 
-  .bg-img {
+/*   .bg-img {
   height: 50%;
   z-index: 1;
   opacity: 0.6;
@@ -149,7 +149,7 @@ body {
 .bg-img img {
   width: 100vw;
   height: 60vh;
-}
+} */
   
   .hamburger {
     font-size: 1.4rem;
@@ -269,6 +269,40 @@ body {
     background-position: 50% 0%;
   }
 }
+
+@media (max-width: 768px) {
+  .herosection {
+    height: 70vh;
+  }
+
+  .bg-img img {
+    height: 70vh;
+    object-fit: cover;
+  }
+
+  .overlay-text {
+    top: 10%;
+    left: 10%;
+  }
+
+  .overlay-text img {
+    width: 50%;
+    height: auto;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .btn {
+    width: fit-content;
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
 
 /* -------------------------- Know Us Section Starts Here ------------------------------------ */
  .know-us{
