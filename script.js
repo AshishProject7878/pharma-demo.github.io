@@ -14,7 +14,7 @@
       });
 
       // Ripple effect
-      $(function () {
+      $(function () { 
         $(".nav-left a")
           .on("mouseenter", function (e) {
             const parentOffset = $(this).offset();
