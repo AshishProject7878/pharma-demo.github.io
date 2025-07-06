@@ -7,210 +7,275 @@
     <link rel="stylesheet" href="style.css" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
-  <body>
-    <div class="main">
-      <!-- ---------------------------------------------- Hero Section ---------------------------------------- -->
-      <!-- --------------------------------------------- Navbar Section --------------------------------------------------------- -->
-<nav class="navbar" id="navbar">
-  <div class="navbar-container">
-    <div class="navbar-links">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#know-us" class="nav-link">Know Us</a>
-      <a href="#specialties" class="nav-link">Specialties</a>
-      <a href="#contact" class="nav-link">Contact</a>
+ <body>
+    <div class="navbar">
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
+
+    <div class="nav-links" id="nav-links">
+      <div class="nav-section nav-left">
+        <a href="#home">Home<span></span></a>
+        <a href="#know-us">About<span></span></a>
+        <a href="#services">Specialties<span></span></a>
+        <a href="#contact">Contact<span></span></a>
+      </div>
+      <div class="nav-section nav-right">
+        <h2>Contact Us</h2>
+        <p>Email: contact@zywie.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Address: Mumbai, India</p>
+      </div>
     </div>
-  </div>
-</nav>
-<!-- --------------------------------------------- Navbar Section Ends Here ---------------------------------------------- -->
-      <div class="herosection" id="home">
-        <div class="bg-img">
-          <img src="meds1.png" alt="" />
+
+    <div class="hero-section" id="home">
+      <div class="logo-Img">
+        <img src="img/Logo.png" alt="Logo" />
+      </div>
+      <div class="banner">
+        <div class="banner-Img">
+          <img src="img/test.png" alt="Banner" />
         </div>
         <div class="overlay-text">
-          <img src="Logo.png" alt="Logo" />
-          <!-- <p>Connecting Health to the World</p> -->
-          <div class="cta-btns">
-            <button class="btn btn-primary">Know More</button>
-            <button class="btn btn-secondary">View Specialties</button>
-          </div>
+          <p>
+            We at Zywie Worldwide <br />
+            believe in Ethics.
+          </p>
         </div>
-      </div>
-      <!-- --------------------------------------- Hero Section Ends Here ----------------------------------------------- -->
-
-      <!-- ----------------------------------------- Know US section --------------------------------------------------------- -->
-
-      <div class="know-us-container" id="know-us">
-            <div class="know-us">
-                <div class="knowUS-section1">
-                    <div class="know-title"><p><i class="fas fa-angle-double-right"></i><span>KNOW US</span></p></div>
-                    <div class="know-sub-title"><p>We work for you since 1989.<br> Industrial around the world</p></div>
-                </div>
-                <div class="knowUS-section2">
-                    <p class="know-text-1">Welcome to Industrie, a leading industry innovator <br> with a rich history of excellence.</p>
-                    <p class="know-text-2">At the heart of the global landscape, the industry stands as a <br> multidimensional force of progress, driving economies.</p>
-                </div>
-            </div>
-            <div class="know-img-container">
-                <img src="medicines.jpg" alt="">
-                <div class="know-btn"><a href="#contact">Contact Us</a> <span><i class="fas fa-arrow-right"></i></span></div>
-            </div>
-        </div>
-      <!-- --------------------------------------------- Know Us Seection ends here ---------------------------------------------- -->
-       <!-- --------------------------------------------- Tape Section --------------------------------------------------------- -->
-      <section class="tape-section">
-        <div class="tape-container">
-          <div class="tape">
-            <span>Pharmaceutical formulation</span>
-            <span>Cosmetics</span>
-            <span>Herbal Cosmetics</span>
-            <span>Surgical disposable</span>
-            <span>Hospital Products</span>
-            <span>Medical Devices</span>
-            <span>Ophthalmic products</span>
-            <span>Ayurvedic medicines & Herbs</span>
-            <span>Nutraceuticals</span>
-            <span>Herbal food Products</span>
-            <span>Biotechnology products</span>
-            <span>Enhanced formulations</span>
-          </div>
-        </div>
-      </section>
-      <!-- --------------------------------------------- Tape Section Ends Here ---------------------------------------------- -->
-       <!-- --------------------------------------------- Specialties Section --------------------------------------------------------- -->
-       <section class="specialties-section" id="specialties">
-         <div class="know-title"><p><i class="fas fa-angle-double-right"></i><span>Our Specialties</span></p></div>
-                     <div class="know-sub-title"><p>Specializing in pharma export<br> regulatory support, and global sourcing.</p></div>
-         <div class="specialties-wrapper">
-      <div class="specialties-categories">
-        <button class="active expanded">
-          Merchant Exports <i class="fas fa-arrow-right enter"></i>
-        </button>
-        <div class="mobile-accordion-content"></div>
-
-        <button>Technical Support <i class="fas fa-arrow-right"></i></button>
-        <div class="mobile-accordion-content"></div>
-
-        <button>Trading <i class="fas fa-arrow-right"></i></button>
-        <div class="mobile-accordion-content"></div>
-
-        <button>Indenting <i class="fas fa-arrow-right"></i></button>
-        <div class="mobile-accordion-content"></div>
-
-        <button>Strategic Sourcing <i class="fas fa-arrow-right"></i></button>
-        <div class="mobile-accordion-content"></div>
-
-        <button>Facilitating Contract <i class="fas fa-arrow-right"></i></button>
-        <div class="mobile-accordion-content"></div>
-      </div>
-
-      <div class="specialties-image">
-        <img src="export.jpg" alt="Merchant Export" />
-      </div>
-
-      <div class="specialties-content">
-        <h2>Merchant Exports</h2>
-        <p class="specialties-desc">
-          The success of a pharmaceutical product depends on the quality of
-          sourced goods. At Zywie, we export pharma products with utmost care
-          and compliance.
-        </p>
-        <ul class="specialties-features">
-          <li><i class="fas fa-check-circle"></i> GDP-compliant shipping</li>
-          <li><i class="fas fa-check-circle"></i> Cold chain management</li>
-          <li><i class="fas fa-check-circle"></i> Reliable global delivery</li>
-        </ul>
       </div>
     </div>
-  </section>
+    <!-- ----------------------------------------- Know US section --------------------------------------------------------- -->
 
-<!-- --------------------------------------------- Contact Section --------------------------------------------------------- -->
-<section class="contact-section" id="contact">
-  <div class="contact-container">
-    <div class="section-header">
-      <!-- <div class="subtitle">Get In Touch</div> -->
-      <div class="know-title"><p><i class="fas fa-angle-double-right"></i><span>Let's Catch Up</span></p></div>
-      <div class="know-sub-title"><p>We’re Always Here to <br> Support Your Pharma Needs</p></div>
+    <div class="know-us-container" id="know-us">
+      <div class="know-us">
+        <div class="knowUS-section1">
+          <div class="know-title">
+            <p><i class="fas fa-angle-double-right"></i><span>KNOW US</span></p>
+          </div>
+          <div class="know-sub-title">
+            <p>
+              We work for you since 1989.<br />
+              Industrial around the world
+            </p>
+          </div>
+        </div>
+        <div class="knowUS-section2">
+          <p class="know-text-1">
+            Welcome to Industrie, a leading industry innovator <br />
+            with a rich history of excellence.
+          </p>
+          <p class="know-text-2">
+            At the heart of the global landscape, the industry stands as a
+            <br />
+            multidimensional force of progress, driving economies.
+          </p>
+        </div>
+      </div>
+      <div class="know-img-container">
+        <img src="img/meeting.jpg" alt="" />
+        <div class="know-btn">
+          <a href="#contact">Contact Us</a>
+          <span><i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
     </div>
-    <div class="contact-container">
-    <div class="contact-grid">
-      <!-- Contact Form -->
-      <div class="contact-form-container">
-        <form class="contact-form" aria-label="Contact form">
-          <h3 class="form-title">Send us a Message</h3>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required />
+    <!-- --------------------------------------------- Know Us Seection ends here ---------------------------------------------- -->
+    <!-- --------------------- Services section starts------------------------------------ -->
+    <div class="service-container" id="services">
+      <div class="service-box service-box-1">
+        <div class="service-box-content">
+          <div>Merchant Exports</div>
+          
+        </div>
+        <div class="service-box-hover-content">
+          <div class="service-hover-title">📦 Merchant Exports</div>
+          <div class="service-hover-description">
+            The success of product is depending upon the goods used in manufacturing. We at Zywie exports goods with care!
+          </div>
+          <div class="service-hover-stats">
+            <div class="service-stat">
+              <span class="service-stat-number">95%</span>
+              <span class="service-stat-label">Performance</span>
             </div>
-            <div class="form-group">
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required />
+            <div class="service-stat">
+              <span class="service-stat-number">24/7</span>
+              <span class="service-stat-label">Support</span>
+            </div>
+            <div class="service-stat">
+              <span class="service-stat-number">∞</span>
+              <span class="service-stat-label">Possibilities</span>
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us more..." required></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+        </div>
       </div>
 
-      <!-- Contact Info -->
-      <div class="contact-info-panel">
-        <div class="info-block">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <h4>Head Office</h4>
-            <p>Plot No 919, 3rd Phase, GIDC<br />Vapi 396195, Gujarat, India</p>
+      <div class="service-box service-box-2">
+        <div class="service-box-content">
+          <div>Technical Support</div>
+          
+        </div>
+        <div class="service-box-hover-content">
+          <div class="service-hover-title">💻 Technical Support</div>
+          <div class="service-hover-description">
+            We have a team of well qualified technical persons. Our team is always there to assist.
+          </div>
+          <div class="service-hover-stats">
+            <div class="service-stat">
+              <span class="service-stat-number">500+</span>
+              <span class="service-stat-label">Projects</span>
+            </div>
+            <div class="service-stat">
+              <span class="service-stat-number">99.9%</span>
+              <span class="service-stat-label">Uptime</span>
+            </div>
+            <div class="service-stat">
+              <span class="service-stat-number">AI</span>
+              <span class="service-stat-label">Powered</span>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="info-block">
-          <i class="fas fa-globe"></i>
-          <div>
-            <h4>Registered Office</h4>
-            <p>71-75 Shelton Street, London WC2H 9JQ<br />United Kingdom</p>
+      <div class="service-box service-box-3">
+        <div class="service-box-content">
+          <div>Trading</div>
+          
+        </div>
+        <div class="service-box-hover-content">
+          <div class="service-hover-title">📊 Trading</div>
+          <div class="service-hover-description">
+           We are in trading since long, so our experience tought us a lot. We understands factors and importance!
+          </div>
+          <div class="service-hover-stats">
+            <div class="service-stat">
+              <span class="service-stat-number">10M+</span>
+              <span class="service-stat-label">Data Points</span>
+            </div>
+            <div class="service-stat">
+              <span class="service-stat-number">Real-time</span>
+              <span class="service-stat-label">Updates</span>
+            </div>
+            <div class="service-stat">
+              <span class="service-stat-number">Smart</span>
+              <span class="service-stat-label">Insights</span>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="info-block">
-          <i class="fas fa-phone"></i>
-          <div>
-            <h4>Phone</h4>
-            <p>+91 94271 85085</p>
-          </div>
+      <div class="service-box service-box-4">
+        <div class="service-box-content">
+          <div>Strategic Sourcing</div>
         </div>
-
-        <div class="info-block">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <h4>Email</h4>
-            <p>info@zywieworldwide.com</p>
+        <div class="service-box-hover-content">
+          <div class="service-hover-title">🔍 Strategic Sourcing</div>
+          <div class="service-hover-description">
+We know the legel issues and what we should take care of during purcahse and trade!We make official request of goods.
+          </div>
+          <div class="service-hover-stats">
+            <div class="service-stat">
+              <span class="service-stat-number">1000+</span>
+              <span class="service-stat-label">Templates</span>
+            </div>
+            <div class="service-stat">
+              <span class="service-stat-number">HD</span>
+              <span class="service-stat-label">Quality</span>
+            </div>
+            <div class="service-stat">
+              <span class="service-stat-number">Cloud</span>
+              <span class="service-stat-label">Sync</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- -------------------------- Services section ends ------------------------------------- -->
+    <!-- --------------------------------------------- Tape Section --------------------------------------------------------- -->
+    <section class="tape-section">
+      <div class="tape-container">
+        <div class="tape">
+          <span>Pharmaceutical formulation</span>
+          <span>Cosmetics</span>
+          <span>Herbal Cosmetics</span>
+          <span>Surgical disposable</span>
+          <span>Hospital Products</span>
+          <span>Medical Devices</span>
+          <span>Ophthalmic products</span>
+          <span>Ayurvedic medicines & Herbs</span>
+          <span>Nutraceuticals</span>
+          <span>Herbal food Products</span>
+          <span>Biotechnology products</span>
+          <span>Enhanced formulations</span>
+        </div>
+      </div>
+    </section>
+    <!-- --------------------------------------------- Tape Section Ends Here ---------------------------------------------- -->
+    <!-- --------------------------------------------- Contact Section Start Here ---------------------------------------------- -->
+    <div class="know-us" id="contact">
+        <div class="knowUS-section1">
+          <div class="know-title">
+            <p><i class="fas fa-angle-double-right"></i><span>Let Us 🩺 Help You 💊</span></p>
+          </div>
+          <div class="know-sub-title">
+            <p>
+              Your Health Our Mission<br />
+              We're Here to Care for You
+            </p>
+          </div>
+        </div>
+        <div class="knowUS-section2">
+          <p class="know-text-1 context-text">
+            Welcome to Industrie, a leading industry innovator <br />
+            with a rich history of excellence.
+          </p>
+          <p class="know-text-2">
+           We’re here to help — Reach out anytime.
+            <br />
+            Whether you're a healthcare provider, distributor, or <br> customer, our team is ready to assist you.
+          </p>
+        </div>
+      </div>
+      <!-- Contact Button -->
+<div class="contact-know-btn" id="open-modal">
+  <span>Contact Us</span>
+  <span><i class="fas fa-arrow-right"></i></span>
+</div>
+
+<!-- Modal -->
+<div id="contact-modal" class="contact-modal hide">
+  <div class="contact-modal-content">
+    <span class="close-modal" id="close-modal">&times;</span>
+    <h2>Let Us Help You</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" id="name" placeholder=" " required />
+        <label for="name">Your Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder=" " required />
+        <label for="email">Your Email</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="subject" placeholder=" " />
+        <label for="subject">Subject</label>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" placeholder=" " required></textarea>
+        <label for="message">Your Message</label>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
   </div>
-  </div>
-</section>
-<!-- --------------------------------------------- Contact Section Ends Here ---------------------------------------------- -->
- <!-- --------------------------------------------- Footer Section --------------------------------------------------------- -->
+</div>
+    <!-- --------------------------------------------- Contact Section Ends Here ---------------------------------------------- -->
+     <!-- --------------------------------------------- Footer Section --------------------------------------------------------- -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-content">
@@ -245,9 +310,10 @@
 <!-- --------------------------------------------- Go to Top Button Ends Here ---------------------------------------------- -->
 <!-- --------------------------------------------- Footer Section Ends Here ---------------------------------------------- -->
 
-    </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+<script src="script.js"></script>
   </body>
 </html>
