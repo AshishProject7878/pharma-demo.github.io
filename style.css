@@ -232,6 +232,14 @@ body {
   .logo-Img {
     width: 50%;
   }
+
+  .hero-section {
+  min-height: 80vh;
+}
+
+  .banner {
+    height: 80vh;
+  }
 }
 
 
