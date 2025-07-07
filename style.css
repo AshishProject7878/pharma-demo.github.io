@@ -1,791 +1,821 @@
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        background: white;
-      }
-
-      .hero-section {
-        position: relative;
-        min-height: 100vh;
-      }
-
-      .logo-Img {
-        position: absolute;
-        top: 20px;
-        left: 0;
-        z-index: 10;
-        background-color: #fff;
-        width: 100%;
-      }
-
-      .logo-Img img {
-        width: 10rem;
-        height: auto;
-        margin-left: 1%;
-        margin-top: 5px;
-      }
-
-      .navbar {
-        position: fixed;
-        top: 4%;
-        right: 0;
-        z-index: 1000;
-        background-color: transparent;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
-
-      .burger {
-        cursor: pointer;
-        width: 30px;
-        height: 24px;
-        position: relative;
-        z-index: 1100;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: transform 0.3s ease;
-      }
-
-      .burger span {
-        height: 3px;
-        width: 100%;
-        background-color: #333;
-        border-radius: 2px;
-        display: block;
-        transition: all 0.3s ease;
-      }
-
-      .burger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-
-      .burger.active span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .burger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-      }
-
-      .nav-links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 100%;
-        background: white;
-        display: flex;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        z-index: 999;
-      }
-
-      .nav-links.active {
-        transform: translateX(0%);
-      }
-
-      .nav-section {
-        width: 50%;
-        height: 100%;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .nav-left a {
-        position: relative;
-        display: block;
-        padding: 20px 0;
-        margin-top: 20px;
-        text-decoration: none;
-        color: #ef1c26;
-        font-size: 1.5rem;
-        width: 40%;
-        text-align: center;
-        border-bottom: 1px solid #eee;
-        overflow: hidden;
-        z-index: 0;
-        border: 1px solid #ccc;
-        border-radius: 15px;
-      }
-
-      .nav-left a span {
-        position: absolute;
-        display: block;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        z-index: -1;
-        background: transparent;
-        opacity: 1;
-        transition: width 0.4s ease, height 0.4s ease, background 0.4s ease,
-          opacity 0.4s ease;
-      }
-
-      .nav-left a:hover {
-        background-color: #f0f0f0;
-      }
-
-      .nav-left a:hover span {
-        width: 200px;
-        height: 200px;
-        background: #a6cd3b;
-        opacity: 1;
-      }
-
-      .nav-right {
-        background-color: #f9f9f9;
-        text-align: center;
-      }
-
-      .nav-right h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: #ef1c26;
-      }
-
-      .nav-right p {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-        color: #333;
-      }
-
-      .banner {
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        position: relative;
-      }
-
-      .banner-Img img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        filter: brightness(60%);
-      }
-
-      .overlay-text {
-        position: absolute;
-        top: 70%;
-        left: 51%;
-        width: 100%;
-        transform: translate(-50%, -50%);
-        color: white;
-        text-align: left;
-        z-index: 5;
-      }
-
-      .overlay-text p {
-        font-size: 4rem;
-        font-weight: bolder;
-        color: white;
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-      }
-
-      @media (max-width: 768px) {
-        .nav-links {
-          flex-direction: column;
-        }
-
-        .nav-section {
-          width: 100%;
-        }
-
-        .nav-left a {
-          width: 80%;
-        }
-
-        .nav-right h2 {
-          font-size: 1.5rem;
-        }
-      }
-
-      /* @media (max-width: 500px) {
-        .overlay-text p {
-          font-size: 3rem;
-        }
-
-        .nav-left a {
-          width: 90%;
-        }
-      } */
-
-      /* ----------------------------- Services Sections Start --------------------------------------- */
-      .service-container {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        background: #ffffff;
-        overflow: hidden;
-        margin-bottom: 50px;
-      }
-
-      .service-box {
-        position: absolute;
-        width: 48.3%;
-        height: 46%;
-        cursor: pointer;
-        transition: all 0.5s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(5px);
-      }
-
-      .service-box-1 {
-        top: 20px;
-        left: 20px;
-        background: #a6cd3b;
-        z-index: 4;
-      }
-
-      .service-box-2 {
-        background: #e72d2e;
-        top: 20px;
-        right: 20px;
-        z-index: 3;
-      }
-
-      .service-box-3 {
-        bottom: 20px;
-        left: 20px;
-        background: #e72d2e;
-        z-index: 2;
-      }
-
-      .service-box-4 {
-        bottom: 20px;
-        right: 20px;
-        background: #a6cd3b;
-        z-index: 1;
-      }
-
-      /* Hover effects - boxes expand to cover their partners */
-      .service-box-1:hover {
-        width: 97.4%;
-        height: 46%;
-        z-index: 10;
-      }
-
-      .service-box-2:hover {
-        width: 97.4%;
-        height: 46%;
-        right: 20px;
-        z-index: 10;
-      }
-
-      .service-box-3:hover {
-        width: 97.4%;
-        height: 46%;
-        z-index: 10;
-      }
-
-      .service-box-4:hover {
-        width: 97.4%;
-        height: 46%;
-        right: 20px;
-        z-index: 10;
-      }
-
-      .service-box-content {
-        opacity: 1;
-        transition: opacity 0.3s ease;
-      }
-
-      .service-box-hover-content {
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        transition: opacity 0.3s ease 0.3s;
-        width: 90%;
-      }
-
-      .service-box:hover .service-box-content {
-        opacity: 0;
-      }
-
-      .service-box:hover .service-box-hover-content {
-        opacity: 1;
-      }
-
-      .service-hover-title {
-        font-size: 25px;
-        margin-bottom: 8px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      }
-
-      .service-hover-description {
-        font-size: 16px;
-        line-height: 1.2;
-        font-weight: normal;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        margin-bottom: 10px;
-      }
-
-      .service-hover-stats {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 15px;
-      }
-
-      .service-stat {
-        text-align: center;
-      }
-
-      .service-stat-number {
-        font-size: 20px;
-        font-weight: bold;
-        display: block;
-      }
-
-      .service-stat-label {
-        font-size: 12px;
-        opacity: 0.8;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .service-box:hover::before {
-        opacity: 1;
-      }
-
-      /* ------------------- MOBILE VIEW ------------------ */
-      @media (max-width: 600px) {
-        .service-container {
-          height: auto;
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          padding: 20px 0;
-          border-radius: 20px;
-          border: 1px solid #e0e0e0;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-        }
-
-        .service-box {
-          position: relative;
-          width: 100%;
-          height: 150px;
-          font-size: 18px;
-        }
-
-        .service-box-3 {
-          bottom: -20px;
-        }
-
-        .service-box-4 {
-          bottom: -20px;
-        }
-
-        /* Hover effects - boxes expand to cover their partners */
-        .service-box-1:hover {
-          width: 95%;
-          height: 250px;
-          z-index: 10;
-          box-shadow: 0 20px 60px rgba(255, 107, 107, 0.4);
-        }
-
-        .service-box-2:hover {
-          width: 95%;
-          height: 250px;
-          z-index: 10;
-          box-shadow: 0 20px 60px rgba(78, 205, 196, 0.4);
-        }
-
-        .service-box-3:hover {
-          width: 95%;
-          height: 250px;
-          z-index: 10;
-          box-shadow: 0 20px 60px rgba(69, 183, 209, 0.4);
-        }
-
-        .service-box-4:hover {
-          width: 95%;
-          height: 250px;
-          z-index: 10;
-          box-shadow: 0 20px 60px rgba(255, 167, 38, 0.4);
-        }
-
-        .service-stat-number {
-          font-size: 16px;
-          font-weight: normal;
-          display: block;
-        }
-
-        .service-stat-label {
-          font-size: 12px;
-          opacity: 0.8;
-          text-transform: none;
-          letter-spacing: 0px;
-        }
-
-        .service-hover-title {
-          font-size: 18px;
-          margin-bottom: 10px;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .service-hover-description {
-          font-size: 12px;
-          line-height: 1.1;
-          font-weight: normal;
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-          margin-bottom: 15px;
-        }
-      }
-      /* ----------------------------- Services Sections Ends --------------------------------------- */
-      /* -------------------------- Know Us Section Starts Here ------------------------------------ */
-      .know-us {
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        padding: 20px 50px;
-        /* margin-bottom: 50px; */
-      }
-
-      .know-us-container {
-        margin-top: 50px;
-      }
-
-      .Know-title {
-        font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      .know-title span {
-        margin-left: 10px;
-      }
-
-      .know-sub-title {
-        font-size: 45px;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 2px;
-        margin-top: 20px;
-      }
-
-      .know-text-1 {
-        font-size: 25px;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 2px;
-      }
-
-      .know-text-2 {
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 2px;
-        color: rgb(123, 123, 123);
-        margin-top: 20px;
-      }
-
-      .know-img-container {
-        padding: 0 50px 50px 50px;
-        height: 450px; /* Set height to control how much image shows */
-        position: relative;
-      }
-
-      .know-img-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
-
-        /* notch effect top right */
-        clip-path: polygon(
-          0 0,
-          calc(100% - 40px) 0,
-          100% 40px,
-          100% 100%,
-          0 100%
-        );
-        /* border-radius: 10px; */
-      }
-
-      .know-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 20px 25px;
-        font-size: 18px;
-        font-family: Arial, sans-serif;
-        color: white;
-        background: linear-gradient(120deg, #e72d2e, #a6ce38);
-        border: none;
-        border-radius: 4px; /* Changed from 30px to 4px */
-        cursor: pointer;
-        position: absolute;
-        top: -12%;
-        right: 15%;
-        transform: translateY(50%);
-        z-index: 2;
-        overflow: hidden;
-        transition: all ease 0.5s;
-      }
-
-      .know-btn a {
-        text-decoration: none;
-        color: white;
-      }
-
-      .know-btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -75%;
-        width: 150%;
-        height: 100%;
-        transform: skewX(-20deg);
-        transition: all 0.5s ease;
-        z-index: 0;
-      }
-
-      .know-btn:hover::before {
-        left: 100%;
-      }
-
-      .know-btn span,
-      .btn i {
-        position: relative;
-        z-index: 1;
-      }
-
-      .know-btn:hover {
-        transform: translateY(50%) scale(1.1);
-      }
-
-      /* Animate arrow on hover */
-      .know-btn:hover i {
-        animation: rotateIn 0.6s forwards;
-      }
-
-      /* Reverse animation on hover out */
-      .know-btn i {
-        animation: rotateOut 0.6s forwards;
-      }
-
-      /* KEYFRAMES */
-      @keyframes rotateIn {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes rotateOut {
-        0% {
-          transform: rotate(360deg);
-        }
-        100% {
-          transform: rotate(0deg);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .know-us {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 20px;
-          padding: 20px;
-        }
-
-        .know-us-container {
-          margin-bottom: 20px;
-        }
-
-        .know-sub-title {
-          font-size: 40px;
-          margin-top: 20px;
-          line-height: 1.2; /* tighter line spacing */
-          text-align: left;
-          margin-bottom: 20px;
-          font-weight: 500px;
-          letter-spacing: 2px;
-        }
-
-        .know-text-1 {
-          font-size: 25px;
-          margin-top: -20px;
-          text-align: left;
-        }
-
-        .know-text-2 {
-          font-size: 16px;
-          text-align: left;
-        }
-
-        .know-img-container {
-          padding: 0 20px 40px 20px;
-          height: 300px;
-          position: relative;
-        }
-
-        .know-btn {
-          position: relative;
-          transform: none;
-          margin-left: auto;
-          margin-right: auto;
-          width: fit-content;
-          max-width: 90%;
-          z-index: 2;
-          left: 5%;
-          background: linear-gradient(
-            120deg,
-            #e72d2e,
-            #a6ce38
-          ); /* darker and non-transparent for clarity */
-        }
-
-        .know-btn:hover {
-        transform: scale(1.1);
-        }
-      }
-      /* ------------------------------------ Know Us Ends -------------------------------------------------- */
-      /* -------------------------- Tape Section Starts Here ------------------------------------ */
-      .tape-section {
-        padding: 0;
-        overflow: hidden;
-        width: 99.09%;
-        margin-top: -20px;
-        transform: skewX(-10deg); /* Slants the tape for visual effect */
-        background-color: #828170; /* Base background behind tape */
-        border-top: 3px solid #fbc02d; /* top edge like tape */
-        border-bottom: 3px solid #fbc02d; /* bottom edge like tape */
-      }
-
-      .tape-container {
-        width: 100%;
-        overflow: hidden;
-      }
-
-      .tape {
-        display: flex;
-        white-space: nowrap;
-        gap: 50px;
-        padding: 20px 0;
-        background: linear-gradient(90deg, #828170, #828170, #828170);
-        background-size: 300% 100%;
-        animation: scrollTape 30s linear infinite, tapeBG 20s linear infinite;
-      }
-
-      .tape span {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 10px 0;
-        white-space: nowrap;
-      }
-
-      /* Optional background shimmer effect */
-      @keyframes tapeBG {
-        0% {
-          background-position: 0% 0%;
-        }
-        100% {
-          background-position: 300% 0%;
-        }
-      }
-
-      /* Responsive: Tablet */
-      @media (max-width: 768px) {
-        .tape span {
-          font-size: 1.2rem;
-        }
-      }
-
-      /* Responsive: Mobile */
-      @media (max-width: 480px) {
-        .tape span {
-          font-size: 1rem;
-        }
-
-        .tape-section {
-          margin-top: 20px;
-          transform: skewX(-2deg); /* Less skew for smaller screens */
-        }
-      }
-
-      /* -------------------- Responsive Queries ------------------------ */
-      @media (max-width: 1024px) {
-        .btn {
-          font-size: 0.95rem;
-          padding: 10px 18px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .btn {
-          width: 100%;
-          max-width: 250px;
-        }
-
-        .tape span {
-          font-size: 1.2rem;
-          padding: 8px 12px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .overlay-text p{
-          top: 10%;
-          left: 5%;
-          font-size: 3rem;
-        }
-
-        .btn {
-          position: absolute;
-          top: 18%;
-          left: 1% !important;
-          font-size: 0.9rem;
-          padding: 8px 12px;
-          width: auto;
-          max-width: 140px;
-        }
-
-        .btn-secondary {
-          top: 25%;
-        }
-
-        .tape span {
-          font-size: 1rem;
-          padding: 6px 10px;
-        }
-
-        .contact-know-btn{
-        left: 30%;
-        }
-      }
-
-      /* ----------------------------------- Tape Section ends ------------------------------------------- */
-      /* ----------------------------------- Contact Section Starts ------------------------------------------- */
-      
-      /* Contact Button */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: white;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+}
+
+.logo-Img {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+  width: 12%;
+}
+
+.logo-Img img {
+  width: 10rem;
+  height: auto;
+  margin-left: 1%;
+  margin-top: 5px;
+}
+
+.navbar {
+  position: fixed;
+  top: 4%;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.burger {
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.burger span {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background: white;
+  display: flex;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.nav-links.active {
+  transform: translateX(0%);
+}
+
+.nav-section {
+  width: 50%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-left a {
+  position: relative;
+  display: block;
+  padding: 20px 0;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #ef1c26;
+  font-size: 1.5rem;
+  width: 40%;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  z-index: 0;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.nav-left a span {
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+  background: transparent;
+  opacity: 1;
+  transition: width 0.4s ease, height 0.4s ease, background 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.nav-left a:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-left a:hover span {
+  width: 200px;
+  height: 200px;
+  background: #a6cd3b;
+  opacity: 1;
+}
+
+.nav-right {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.nav-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ef1c26;
+}
+
+.nav-right p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(80%);
+}
+
+@media (max-width: 768px) {
+  .slide img {
+    object-position: 10%;
+  }
+}
+
+.overlay-text {
+  position: absolute;
+  top: 70%;
+  left: 51%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: left;
+  z-index: 3;
+}
+
+.overlay-text p {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1500px) {
+  .logo-Img {
+    width: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-Img {
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+  .nav-section {
+    width: 100%;
+  }
+
+  .nav-left a {
+    width: 80%;
+  }
+
+  .nav-right h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ----------------------------- Services Sections Start --------------------------------------- */
+.service-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.service-box {
+  position: absolute;
+  width: 49%;
+  height: 47.1%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.service-box-1 {
+  top: 20px;
+  left: 20px;
+  background: #8fb034;
+  z-index: 4;
+}
+
+.service-box-2 {
+  background: #c42626;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+}
+
+.service-box-3 {
+  bottom: 20px;
+  left: 20px;
+  background: #c42626;
+  z-index: 2;
+}
+
+.service-box-4 {
+  bottom: 20px;
+  right: 20px;
+  background: #8fb034;
+  z-index: 1;
+}
+
+/* Hover effects - boxes expand to cover their partners */
+.service-box-1:hover {
+  width: 97.4%;
+  height: 47.1%;
+  z-index: 10;
+}
+
+.service-box-2:hover {
+  width: 97.4%;
+  height: 47.1%;
+  right: 20px;
+  z-index: 10;
+}
+
+.service-box-3:hover {
+  width: 97.4%;
+  height: 47.1%;
+  z-index: 10;
+}
+
+.service-box-4:hover {
+  width: 97.4%;
+  height: 47.1%;
+  right: 20px;
+  z-index: 10;
+}
+
+.service-box-content {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.service-box-hover-content {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: opacity 0.3s ease 0.3s;
+  width: 90%;
+}
+
+.service-box:hover .service-box-content {
+  opacity: 0;
+}
+
+.service-box:hover .service-box-hover-content {
+  opacity: 1;
+}
+
+.service-hover-title {
+  font-size: 25px;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.service-hover-description {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.service-hover-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.service-stat {
+  text-align: center;
+}
+
+.service-stat-number {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.service-stat-label {
+  font-size: 12px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-box:hover::before {
+  opacity: 1;
+}
+
+/* ------------------- MOBILE VIEW ------------------ */
+@media (max-width: 600px) {
+  .service-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .service-box {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    font-size: 18px;
+  }
+  
+  .service-box-1{
+    border-radius: 8px 0px 0px 8px;
+  }
+
+  .service-box-2{
+    border-radius: 0px 8px 8px 0px;
+  }
+
+  .service-box-3 {
+    bottom: -20px;
+    border-radius: 8px 0px 0px 8px;
+  }
+
+  .service-box-4 {
+    bottom: -20px;
+    border-radius: 0px 8px 8px 0px;
+  }
+
+  /* Hover effects - boxes expand to cover their partners */
+  .service-box-1:hover {
+    width: 95%;
+    height: 250px;
+    z-index: 10;
+    box-shadow: 0 20px 60px rgba(255, 107, 107, 0.4);
+  }
+
+  .service-box-2:hover {
+    width: 95%;
+    height: 250px;
+    z-index: 10;
+    box-shadow: 0 20px 60px rgba(78, 205, 196, 0.4);
+  }
+
+  .service-box-3:hover {
+    width: 95%;
+    height: 250px;
+    z-index: 10;
+    box-shadow: 0 20px 60px rgba(69, 183, 209, 0.4);
+  }
+
+  .service-box-4:hover {
+    width: 95%;
+    height: 250px;
+    z-index: 10;
+    box-shadow: 0 20px 60px rgba(255, 167, 38, 0.4);
+  }
+
+  .service-stat-number {
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+  }
+
+  .service-stat-label {
+    font-size: 12px;
+    opacity: 0.8;
+    text-transform: none;
+    letter-spacing: 0px;
+  }
+
+  .service-hover-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .service-hover-description {
+    font-size: 12px;
+    line-height: 1.1;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+  }
+}
+/* ----------------------------- Services Sections Ends --------------------------------------- */
+/* -------------------------- Know Us Section Starts Here ------------------------------------ */
+.know-us {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 20px 50px;
+  /* margin-bottom: 50px; */
+}
+
+.know-us-container {
+  margin-top: 50px;
+}
+
+.Know-title {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.know-title span {
+  margin-left: 10px;
+}
+
+.know-sub-title {
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.know-text-1 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+
+.know-text-2 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  color: rgb(123, 123, 123);
+  margin-top: 20px;
+}
+
+.know-img-container {
+  padding: 0 50px 50px 50px;
+  height: 450px; /* Set height to control how much image shows */
+  position: relative;
+}
+
+.know-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+
+  /* notch effect top right */
+  clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%);
+  /* border-radius: 10px; */
+}
+
+.know-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 25px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(120deg, #e72d2e, #a6ce38);
+  border: none;
+  border-radius: 4px; /* Changed from 30px to 4px */
+  cursor: pointer;
+  position: absolute;
+  top: -12%;
+  right: 15%;
+  transform: translateY(50%);
+  z-index: 2;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+
+.know-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.know-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 150%;
+  height: 100%;
+  transform: skewX(-20deg);
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+
+.know-btn:hover::before {
+  left: 100%;
+}
+
+.know-btn span,
+.btn i {
+  position: relative;
+  z-index: 1;
+}
+
+.know-btn:hover {
+  transform: translateY(50%) scale(1.1);
+}
+
+/* Animate arrow on hover */
+.know-btn:hover i {
+  animation: rotateIn 0.6s forwards;
+}
+
+/* Reverse animation on hover out */
+.know-btn i {
+  animation: rotateOut 0.6s forwards;
+}
+
+/* KEYFRAMES */
+@keyframes rotateIn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateOut {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .know-us {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .know-us-container {
+    margin-bottom: 20px;
+  }
+
+  .know-sub-title {
+    font-size: 40px;
+    margin-top: 20px;
+    line-height: 1.2; /* tighter line spacing */
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: 500px;
+    letter-spacing: 2px;
+  }
+
+  .know-text-1 {
+    font-size: 25px;
+    margin-top: -20px;
+    text-align: left;
+  }
+
+  .know-text-2 {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .know-img-container {
+    padding: 0 20px 40px 20px;
+    height: 300px;
+    position: relative;
+  }
+
+  .know-btn {
+    position: relative;
+    transform: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    max-width: 90%;
+    z-index: 2;
+    left: 5%;
+    background: linear-gradient(
+      120deg,
+      #e72d2e,
+      #a6ce38
+    ); /* darker and non-transparent for clarity */
+  }
+
+  .know-btn:hover {
+    transform: scale(1.1);
+  }
+}
+/* ------------------------------------ Know Us Ends -------------------------------------------------- */
+/* -------------------------- Tape Section Starts Here ------------------------------------ */
+.tape-section {
+  padding: 0;
+  overflow: hidden;
+  width: 99.09%;
+  margin-top: -20px;
+  transform: skewX(-10deg); /* Slants the tape for visual effect */
+  background-color: #828170; /* Base background behind tape */
+  border-top: 3px solid #fbc02d; /* top edge like tape */
+  border-bottom: 3px solid #fbc02d; /* bottom edge like tape */
+}
+
+.tape-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tape {
+  display: flex;
+  white-space: nowrap;
+  gap: 50px;
+  padding: 20px 0;
+  background: linear-gradient(90deg, #828170, #828170, #828170);
+  background-size: 300% 100%;
+  animation: scrollTape 30s linear infinite, tapeBG 20s linear infinite;
+}
+
+.tape span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+/* Optional background shimmer effect */
+@keyframes tapeBG {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 300% 0%;
+  }
+}
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+  .tape span {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+  .tape span {
+    font-size: 1rem;
+  }
+
+  .tape-section {
+    margin-top: 20px;
+    transform: skewX(-2deg); /* Less skew for smaller screens */
+  }
+}
+
+/* -------------------- Responsive Queries ------------------------ */
+@media (max-width: 1024px) {
+  .btn {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .tape span {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-text p {
+    font-size: 2.5rem;
+    margin-left: 20px;
+  }
+
+  .btn {
+    position: absolute;
+    top: 18%;
+    left: 1% !important;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    width: auto;
+    max-width: 140px;
+  }
+
+  .btn-secondary {
+    top: 25%;
+  }
+
+  .tape span {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  .contact-know-btn {
+    left: 30%;
+  }
+}
+
+/* ----------------------------------- Tape Section ends ------------------------------------------- */
+/* ----------------------------------- Contact Section Starts ------------------------------------------- */
+
+/* Contact Button */
 .contact-know-btn {
   display: inline-flex;
   align-items: center;
@@ -995,7 +1025,7 @@
     font-size: 15px;
     padding: 12px 16px;
     margin-bottom: 50px;
-    margin-top: -120px; 
+    margin-top: -120px;
   }
 
   .contact-modal-content h2 {
@@ -1020,9 +1050,8 @@
   }
 }
 
-
-      /* ----------------------------------- Contact Section End ------------------------------------------- */
-      /* -------------------------- Footer Section Starts Here ------------------------------------ */
+/* ----------------------------------- Contact Section End ------------------------------------------- */
+/* -------------------------- Footer Section Starts Here ------------------------------------ */
 .footer {
   background: #0f172a;
   padding: 40px 20px;
@@ -1044,15 +1073,15 @@
 }
 
 .footer-info h4 {
-  font-family: 'Genos', sans-serif;
+  font-family: "Genos", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #A6CD3B;
+  color: #a6cd3b;
 }
 
 .footer-info p {
-  font-family: 'Genos', sans-serif;
+  font-family: "Genos", sans-serif;
   font-size: 1rem;
   color: #828071;
   max-width: 300px;
@@ -1066,7 +1095,7 @@
 }
 
 .footer-link {
-  font-family: 'Genos', sans-serif;
+  font-family: "Genos", sans-serif;
   font-size: 1rem;
   color: #ffffff;
   text-decoration: none;
@@ -1074,7 +1103,7 @@
 }
 
 .footer-link:hover {
-  color: #EF1C26;
+  color: #ef1c26;
 }
 
 .footer-social {
@@ -1085,7 +1114,7 @@
 .social-icon {
   font-size: 1.2rem;
   color: #ffffff;
-  background: linear-gradient(135deg, #A6CD3B, #EF1C26);
+  background: linear-gradient(135deg, #a6cd3b, #ef1c26);
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -1106,7 +1135,7 @@
 }
 
 .footer-bottom p {
-  font-family: 'Genos', sans-serif;
+  font-family: "Genos", sans-serif;
   font-size: 0.9rem;
   color: #828071;
 }
@@ -1197,7 +1226,7 @@
   z-index: 1000;
 }
 
-.context-text{
+.context-text {
   opacity: 0;
 }
 
@@ -1262,7 +1291,7 @@
     right: 15px;
     font-size: 1.2rem;
   }
-  .context-text{
+  .context-text {
     display: none;
   }
   .progress-ring {
@@ -1275,4 +1304,4 @@
     cy: 22.5;
     r: 20.5;
   }
-} 
+}
