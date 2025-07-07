@@ -328,6 +328,9 @@ body {
 }
 
 /* ----------------------------- Services Sections Start --------------------------------------- */
+.Specialities{
+  padding: 10px 40px;
+}
 .service-container {
   position: relative;
   width: 100%;
