@@ -161,3 +161,22 @@ const openBtn = document.getElementById("open-modal");
   }
 
   setInterval(nextSlide, 4000); // Change slide every 5 seconds
+
+// ---------------- Loadder
+
+
+window.addEventListener('load', function() {
+            const loaderContainer = document.querySelector('.loader-container');
+            const heroSection = document.querySelector('.hero-section');
+            if (loaderContainer && heroSection) {
+                setTimeout(() => {
+                    loaderContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        loaderContainer.style.display = 'none';
+                        heroSection.classList.add('visible'); // Show content
+                    }, 500); // Match transition duration
+                }, 6000); // Total duration: 8 seconds
+            } else {
+                console.log('Loader or hero section not found');
+            }
+        });
