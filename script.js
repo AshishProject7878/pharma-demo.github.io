@@ -165,18 +165,18 @@ const openBtn = document.getElementById("open-modal");
 // ---------------- Loadder
 
 
-window.addEventListener('load', function() {
-            const loaderContainer = document.querySelector('.loader-container');
-            const heroSection = document.querySelector('.hero-section');
-            if (loaderContainer && heroSection) {
-                setTimeout(() => {
-                    loaderContainer.style.opacity = '0';
-                    setTimeout(() => {
-                        loaderContainer.style.display = 'none';
-                        heroSection.classList.add('visible'); // Show content
-                    }, 500); // Match transition duration
-                }, 6000); // Total duration: 8 seconds
-            } else {
-                console.log('Loader or hero section not found');
-            }
-        });
+// window.addEventListener('load', function() {
+//             const loaderContainer = document.querySelector('.loader-container');
+//             const heroSection = document.querySelector('.hero-section');
+//             if (loaderContainer && heroSection) {
+//                 setTimeout(() => {
+//                     loaderContainer.style.opacity = '0';
+//                     setTimeout(() => {
+//                         loaderContainer.style.display = 'none';
+//                         heroSection.classList.add('visible'); 
+//                     }, 500); 
+//                 }, 6000); 
+//             } else {
+//                 console.log('Loader or hero section not found');
+//             }
+//         });
