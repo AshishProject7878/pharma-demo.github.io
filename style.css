@@ -77,12 +77,7 @@ body {
 }
 
 .logo-Img {
-  position: absolute;
-  top: 20px;
-  left: 0;
   z-index: 10;
-  background-color: #fff;
-  width: 12%;
 }
 
 .logo-Img img {
@@ -94,14 +89,17 @@ body {
 
 .navbar {
   position: fixed;
-  top: 4%;
-  right: 0;
+  top: 0%;
   z-index: 1000;
-  background-color: transparent;
+  background-color: #fff;
   padding: 10px 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .burger {
@@ -262,6 +260,10 @@ body {
   .slide img {
     object-position: 10% 100%;
   }
+
+  .logo-Img img{
+    width: 100px;
+  }
 }
 
 .overlay-text {
@@ -311,8 +313,13 @@ body {
     width: 100%;
   }
 
+  .nav-left{
+    margin-top: 50px;
+  }
+
   .nav-left a {
     width: 80%;
+    padding: 10px 0;
   }
 
   .nav-right h2 {
