@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Environmental Safety - Pharma Logistics</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+        background: #f9f9f9;
+      }
+
+      .section-label-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .section-label-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      /* Sections */
+      section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .eco-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .eco-card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .eco-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .eco-card h3 {
+        margin-bottom: 15px;
+        color: #388e3c;
+      }
+
+      .workflow {
+        background: #e8f5e9;
+        border-radius: 12px;
+        padding: 40px 20px;
+      }
+
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .step {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .eco h2 {
+        margin-bottom: 20px;
+      }
+
+      /* Call to Action */
+      .cta {
+        text-align: center;
+        background: linear-gradient(135deg, #388e3c, #1b5e20);
+        color: #fff;
+        padding: 60px 20px;
+        border-radius: 12px;
+        margin: 40px auto;
+      }
+
+      .cta h2 {
+        color: #fff;
+      }
+
+      .cta-btn {
+        display: inline-block;
+        margin-top: 20px;
+        cursor: pointer;
+        padding: 12px 30px;
+        background: #fff;
+        color: #1b5e20;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        background: #1b5e20;
+        color: #fff;
+      }
+
+      /* Show modal */
+.contact-modal.show {
+  display: flex;
+}
+
+/* Hide modal */
+.contact-modal.hide {
+  display: none;
+}
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .section-label-header h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.6rem;
+        }
+        .eco-card {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- -------------------------------------------- Navbar ----------- -->
+    <div class="navbar">
+      <div class="logo-Img">
+        <img src="img/Logo.png" alt="Logo" />
+      </div>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <div class="nav-section nav-left">
+        <a href="index.html">Home<span></span></a>
+        <a href="about.html">About<span></span></a>
+        <a href="operation.html">Operations<span></span></a>
+        <a href="env-safety.html">Environmental Safety<span></span></a>
+        <a href="#contact">Contact<span></span></a>
+      </div>
+      <div class="nav-section nav-right">
+        <h2>Contact Us</h2>
+        <p>Email: contact@zywie.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Address: Mumbai, India</p>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="section-label">
+      <h1>Environmental Safety</h1>
+    </div>
+
+    <!-- Eco Practices -->
+    <section class="eco">
+      <h2>Our Green Initiatives</h2>
+      <div class="eco-grid">
+        <div class="eco-card">
+          <h3>Eco-Friendly Fleet</h3>
+          <p>
+            We use fuel-efficient and hybrid vehicles to reduce carbon
+            footprint.
+          </p>
+        </div>
+        <div class="eco-card">
+          <h3>Waste Management</h3>
+          <p>Proper disposal and recycling of packaging materials and waste.</p>
+        </div>
+        <div class="eco-card">
+          <h3>Energy Efficiency</h3>
+          <p>Cold storage powered by renewable energy for reduced emissions.</p>
+        </div>
+        <div class="eco-card">
+          <h3>Compliance Standards</h3>
+          <p>
+            Operations aligned with global environmental safety regulations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow -->
+    <section class="workflow">
+      <h2>How We Ensure Sustainability</h2>
+      <div class="steps">
+        <div class="step">1. Use of eco-friendly packaging materials.</div>
+        <div class="step">2. Optimized routes to reduce fuel consumption.</div>
+        <div class="step">3. Green warehousing with solar energy.</div>
+        <div class="step">4. Recycling and waste management practices.</div>
+        <div class="step">
+          5. Continuous improvement towards net-zero emissions.
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <h2>Partner with a Sustainable Logistics Leader</h2>
+      <p>Choose us to transport your products responsibly and safely.</p>
+      <div class="cta-btn" id="open-modal2">Get in Touch</div>
+    </section>
+
+    <!-- Modal -->
+    <div id="contact-modal2" class="contact-modal">
+      <div class="contact-modal-content">
+        <span class="close-modal" id="close-modal2">&times;</span>
+        <h2>Let Us Help You</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name2" placeholder=" " required />
+            <label for="name2">Your Name</label>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email2" placeholder=" " required />
+            <label for="email2">Your Email</label>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="subject2" placeholder=" " />
+            <label for="subject2">Subject</label>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message2" placeholder=" " required></textarea>
+            <label for="message2">Your Message</label>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------- Footer Section --------------------------------------------------------- -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h4>Zywie Worldwide</h4>
+            <p>
+              Connecting global communities with innovative healthcare
+              solutions.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">Know Us</a>
+            <a href="operation.html" class="footer-link">Operations</a>
+            <a href="env-safety.html" class="footer-link"
+              >Environmental Safety</a
+            >
+            <a href="#contact" class="footer-link">Contact</a>
+          </div>
+          <!-- <div class="footer-social">
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      </div> -->
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      const openModal2 = document.getElementById("open-modal2");
+      const contactModal2 = document.getElementById("contact-modal2");
+      const closeModal2 = document.getElementById("close-modal2");
+
+      openModal2.addEventListener("click", () => {
+        contactModal2.classList.add("show");
+        contactModal2.classList.remove("hide");
+      });
+
+      closeModal2.addEventListener("click", () => {
+        contactModal2.classList.remove("show");
+        contactModal2.classList.add("hide");
+      });
+
+      window.addEventListener("click", (event) => {
+        if (event.target === contactModal2) {
+          contactModal2.classList.remove("show");
+          contactModal2.classList.add("hide");
+        }
+      });
+    </script>
+  </body>
+</html>
