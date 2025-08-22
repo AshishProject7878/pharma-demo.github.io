@@ -115,6 +115,13 @@
 @media (max-width: 768px) {
   .steps {
     justify-content: flex-start;
+    flex-direction: column; /* stack steps vertically */
+    align-items: stretch;   /* make them take full width */
+  }
+
+  .step {
+    width: 100%;       /* take full screen width */
+    box-sizing: border-box;
   }
 }
 
@@ -248,3 +255,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
