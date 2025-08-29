@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Categories</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .download-btn {
+        display: inline-block;
+        margin: 20px auto 40px 40px; /* added left margin */
+        padding: 12px 22px;
+        background: #1a237e;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.2s ease;
+        text-align: center;
+      }
+
+      .download-btn:hover {
+        background: #0d154d;
+        transform: translateY(-3px);
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto 60px auto;
+      }
+
+      .product-card {
+        position: relative;
+        background: #fff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        height: 280px;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-card img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .product-card:hover img {
+        transform: scale(1.08);
+      }
+
+      .product-card::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+        z-index: 1;
+      }
+
+      .product-card h3 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 15px;
+        font-size: 1.2rem;
+        color: #fff;
+        font-weight: 600;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(3px);
+        transition: background 0.3s ease;
+      }
+
+      .product-card:hover h3 {
+        background: rgba(26, 35, 126, 0.85);
+      }
+
+      .section-label {
+        text-align: center;
+        margin: 40px 0 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- -------------------------------------------- Navbar ----------- -->
+    <div class="navbar">
+      <div class="logo-Img">
+        <img src="img/Logo.png" alt="Logo" />
+      </div>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <div class="nav-section nav-left">
+        <a href="index.html">Home<span></span></a>
+        <a href="about.html">About<span></span></a>
+        <a href="operation.html">Operations<span></span></a>
+        <a href="allproducts.html">Products<span></span></a>
+        <a href="env-safety.html">Environmental Safety<span></span></a>
+        <a href="#contact">Contact<span></span></a>
+      </div>
+      <div class="nav-section nav-right">
+        <h2>Contact Us</h2>
+        <p>Email: contact@zywie.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Address: Mumbai, India</p>
+      </div>
+    </div>
+
+    <!-- Section Label -->
+    <div class="section-label">
+      <h1>Product Categories</h1>
+      <!-- Centered Download Button -->
+    </div>
+    <a href="assests/productList.xlsx" download class="download-btn">⬇ Download Excel</a>
+
+    <!-- Product Grid -->
+    <div class="grid-container">
+      <div class="product-card">
+        <img src="img/generalProducts.jpg" alt="General Products" />
+        <h3>General Products</h3>
+      </div>
+      <div class="product-card">
+        <img src="img/Penicillin.jpg" alt="Cephalosporin & Penicillin" />
+        <h3>Cephalosporin & Penicillin</h3>
+      </div>
+      <div class="product-card">
+        <img src="img/injection.jpg" alt="General Injection" />
+        <h3>General Injection</h3>
+      </div>
+      <div class="product-card">
+        <img src="img/softgel.jpg" alt="Softgel OTC" />
+        <h3>Softgel OTC</h3>
+      </div>
+      <div class="product-card">
+        <img src="img/eye drop.jpg" alt="Eye-Ear Drop" />
+        <h3>Eye-Ear Drop</h3>
+      </div>
+      <div class="product-card">
+        <img src="img/oinment.jpg" alt="Ointment" />
+        <h3>Ointment</h3>
+      </div>
+      <div class="product-card">
+        <img src="img/blood.jpg" alt="Blood Bag" />
+        <h3>Blood Bag</h3>
+      </div>
+      <div class="product-card">
+        <img src="img/derma.jpg" alt="Derma Patches" />
+        <h3>Derma Patches</h3>
+      </div>
+      <div class="product-card">
+        <img src="img/surgical.jpg" alt="Surgical Disposables" />
+        <h3>Surgical Disposables</h3>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h4>Zywie Worldwide</h4>
+            <p>
+              Connecting global communities with innovative healthcare
+              solutions.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">Know Us</a>
+            <a href="operation.html" class="footer-link">Operations</a>
+            <a href="allproducts.html" class="footer-link">Products</a>
+            <a href="env-safety.html" class="footer-link"
+              >Environmental Safety</a
+            >
+            <a href="#contact" class="footer-link">Contact</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
