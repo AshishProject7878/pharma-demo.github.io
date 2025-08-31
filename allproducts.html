@@ -6,44 +6,23 @@
     <title>Product Categories</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      .download-btn {
-        display: inline-block;
-        margin: 20px auto 40px 40px; /* added left margin */
-        padding: 12px 22px;
-        background: #1a237e;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 8px;
-        text-decoration: none;
-        transition: background 0.3s ease, transform 0.2s ease;
-        text-align: center;
-      }
-
-      .download-btn:hover {
-        background: #0d154d;
-        transform: translateY(-3px);
-      }
-
       .grid-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 25px;
         max-width: 1200px;
-        margin: 0 auto 60px auto;
+        margin: 60px auto;
+        padding: 0 15px;
       }
 
       .product-card {
         position: relative;
-        background: #fff;
         border-radius: 14px;
         overflow: hidden;
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
         cursor: pointer;
         transition: transform 0.35s ease, box-shadow 0.35s ease;
         height: 280px;
-        display: flex;
-        align-items: flex-end;
       }
 
       .product-card:hover {
@@ -64,34 +43,56 @@
         transform: scale(1.08);
       }
 
-      .product-card::before {
-        content: "";
+      /* Category name always visible */
+      .card-title {
         position: absolute;
         bottom: 0;
         left: 0;
-        right: 0;
-        height: 60%;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
-        z-index: 1;
-      }
-
-      .product-card h3 {
-        position: relative;
-        z-index: 2;
         width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 15px;
-        font-size: 1.2rem;
+        background: rgba(0, 0, 0, 0.6);
         color: #fff;
+        text-align: center;
+        padding: 12px;
+        font-size: 1.2rem;
         font-weight: 600;
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(3px);
-        transition: background 0.3s ease;
+        z-index: 2;
       }
 
-      .product-card:hover h3 {
-        background: rgba(26, 35, 126, 0.85);
+      /* Overlay container for button */
+      .card-overlay {
+        position: absolute;
+        bottom: -50%; /* hidden initially */
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: rgba(166, 205, 59, 0.9);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: bottom 0.4s ease;
+        z-index: 3;
+      }
+
+      .product-card:hover .card-overlay {
+        bottom: 0; /* slide up on hover */
+      }
+
+      .download-btn {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #fff;
+        color: #1a237e;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.2s ease;
+      }
+
+      .download-btn:hover {
+        background: #e0e0e0;
+        transform: translateY(-2px);
       }
 
       .section-label {
@@ -132,47 +133,102 @@
     <!-- Section Label -->
     <div class="section-label">
       <h1>Product Categories</h1>
-      <!-- Centered Download Button -->
     </div>
-    <a href="productList.xlsx" download class="download-btn">⬇ Download Excel</a>
 
     <!-- Product Grid -->
     <div class="grid-container">
       <div class="product-card">
         <img src="generalProducts.jpg" alt="General Products" />
-        <h3>General Products</h3>
+        <div class="card-title">General Products</div>
+        <div class="card-overlay">
+          <a href="productList.pdf" download class="download-btn">
+            ⬇ Download PDF
+          </a>
+        </div>
       </div>
+
       <div class="product-card">
         <img src="Penicillin.jpg" alt="Cephalosporin & Penicillin" />
-        <h3>Cephalosporin & Penicillin</h3>
+        <div class="card-title">Cephalosporin & Penicillin</div>
+        <div class="card-overlay">
+          <a
+            href="ProductList Penicillin.pdf"
+            download
+            class="download-btn"
+          >
+            ⬇ Download PDF
+          </a>
+        </div>
       </div>
+
       <div class="product-card">
         <img src="injection.jpg" alt="General Injection" />
-        <h3>General Injection</h3>
+        <div class="card-title">General Injection</div>
+        <div class="card-overlay">
+          <a href="general Injection.pdf" download class="download-btn">
+            ⬇ Download PDF
+          </a>
+        </div>
       </div>
+
       <div class="product-card">
         <img src="softgel.jpg" alt="Softgel OTC" />
-        <h3>Softgel OTC</h3>
+        <div class="card-title">Softgel OTC</div>
+        <div class="card-overlay">
+          <a href="Softgel.pdf" download class="download-btn">
+            ⬇ Download PDF
+          </a>
+        </div>
       </div>
+
       <div class="product-card">
         <img src="eye drop.jpg" alt="Eye-Ear Drop" />
-        <h3>Eye-Ear Drop</h3>
+        <div class="card-title">Eye-Ear Drop</div>
+        <div class="card-overlay">
+          <a href="eardrop.pdf" download class="download-btn">
+            ⬇ Download PDF
+          </a>
+        </div>
       </div>
+
       <div class="product-card">
         <img src="oinment.jpg" alt="Ointment" />
-        <h3>Ointment</h3>
+        <div class="card-title">Ointment</div>
+        <div class="card-overlay">
+          <a href="Ointment.pdf" download class="download-btn">
+            ⬇ Download PDF
+          </a>
+        </div>
       </div>
+
       <div class="product-card">
         <img src="blood.jpg" alt="Blood Bag" />
-        <h3>Blood Bag</h3>
+        <div class="card-title">Blood Bag</div>
+        <div class="card-overlay">
+          <a href="blood-bag.pdf" download class="download-btn">
+            ⬇ Download PDF
+          </a>
+        </div>
       </div>
+
       <div class="product-card">
         <img src="derma.jpg" alt="Derma Patches" />
-        <h3>Derma Patches</h3>
+        <div class="card-title">Derma Patches</div>
+        <div class="card-overlay">
+          <a href="derma patch.pdf" download class="download-btn">
+            ⬇ Download PDF
+          </a>
+        </div>
       </div>
+
       <div class="product-card">
         <img src="surgical.jpg" alt="Surgical Disposables" />
-        <h3>Surgical Disposables</h3>
+        <div class="card-title">Surgical Disposables</div>
+        <div class="card-overlay">
+          <a href="surgical disposal.pdf" download class="download-btn">
+            ⬇ Download PDF
+          </a>
+        </div>
       </div>
     </div>
 
@@ -185,7 +241,10 @@
             <p>
               Connecting global communities with innovative healthcare
               solutions.
-            </p>
+            </p><br>
+            <p><strong>Email:</strong> contact@zywie.com</p>
+            <p><strong>Phone:</strong> +91 9876543210</p>
+            <p><strong>Address:</strong> Mumbai, India</p>
           </div>
           <div class="footer-links">
             <a href="index.html" class="footer-link">Home</a>
@@ -198,15 +257,23 @@
             <a href="#contact" class="footer-link">Contact</a>
           </div>
         </div>
+
+        <!-- Download All Products Button -->
+        <div class="footer-download">
+          <a href="Product List Main.pdf" download class="download-btn">
+            ⬇ Download All Products
+          </a>
+        </div>
+
         <div class="footer-bottom">
           <p>&copy; 2025 All rights reserved.</p>
         </div>
       </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
-
