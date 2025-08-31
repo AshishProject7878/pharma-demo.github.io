@@ -117,18 +117,24 @@
         gap: 12px;
         flex: 1 1 220px;
         position: relative;
+        transition: transform 0.3s;
+      }
+
+      .step:hover {
+        transform: translateY(-5px);
       }
 
       .step span {
         background: #1a6aff;
         color: #fff;
-        width: 32px;
-        height: 32px;
+        width: 35px;
+        height: 35px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
         font-weight: bold;
+        flex-shrink: 0;
       }
 
       /* Compliance */
@@ -144,18 +150,32 @@
         color: #555;
       }
 
-      /* Mobile */
-      @media (max-width: 768px) {
-        .steps {
-          flex-direction: column;
-          align-items: stretch;
-        }
-      }
+      /* ✅ Mobile Compact Override */
+@media (max-width: 768px) {
+  .step {
+    min-height: 45px !important;
+    padding: 6px 10px !important;
+    margin: 4px 0 !important;
+    font-size: 0.85rem !important;
+    border-radius: 6px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+  }
+
+  .step span {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 0.75rem !important;
+  }
+
+  .steps {
+    gap: 8px !important;
+  }
+}
+
     </style>
   </head>
   <body>
     <!-- Navbar -->
-    <!-- -------------------------------------------- Navbar ----------- -->
     <div class="navbar">
       <div class="logo-Img">
         <img src="Logo.png" alt="Logo" />
@@ -182,7 +202,6 @@
         <p>Address: Mumbai, India</p>
       </div>
     </div>
-
 
     <!-- Hero -->
     <section class="hero">
@@ -269,7 +288,7 @@
         </div>
         <!-- Download All Products -->
         <div class="footer-download">
-          <a href="Product List Main.pdf" download class="download-btn">
+          <a href="assests/Product List Main.pdf" download class="download-btn">
             ⬇ Download All Products
           </a>
         </div>
@@ -284,7 +303,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
