@@ -11,8 +11,10 @@ document.getElementById('language-select').addEventListener('change', function()
     'about-es.html': 'about.html',
     'operation-es.html': 'operation.html',
     'allproducts-es.html': 'allproducts.html',
-    'env-safety-es.html': 'env-safety.html'
+    'env-safety-es.html': 'env-safety.html',
+    'Contact.html': 'Contact-es.html',
   };
   const targetPage = pageMap[currentPage] || (lang === 'en' ? 'index.html' : 'index-es.html');
   window.location.href = targetPage;
+
 });
