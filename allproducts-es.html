@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categorías de Productos</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 15px;
+      }
+
+      .product-card {
+        position: relative;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        height: 280px;
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-card img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .product-card:hover img {
+        transform: scale(1.08);
+      }
+
+      /* Category name always visible */
+      .card-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        z-index: 2;
+      }
+
+      /* Overlay container for button */
+      .card-overlay {
+        position: absolute;
+        bottom: -50%; /* hidden initially */
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: rgba(166, 205, 59, 0.9);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: bottom 0.4s ease;
+        z-index: 3;
+      }
+
+      .product-card:hover .card-overlay {
+        bottom: 0; /* slide up on hover */
+      }
+
+      .download-btn {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #fff;
+        color: #1a237e;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.2s ease;
+      }
+
+      .download-btn:hover {
+        background: #e0e0e0;
+        transform: translateY(-2px);
+      }
+
+      .section-label {
+        text-align: center;
+        margin: 40px 0 20px 0;
+      }
+
+      /* Hero */
+      .hero {
+        background: url("img/products.jpg") center/cover no-repeat;
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+      .hero h1 {
+        position: relative;
+        font-size: 2.8rem;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- -------------------------------------------- Navbar ----------- -->
+    <div class="navbar">
+      <div class="logo-Img">
+        <img src="img/Logo.png" alt="Logo" />
+      </div>
+      <div class="language-section">
+        <select id="language-select">
+          <option value="en">English</option>
+          <option value="es" selected>Español</option>
+        </select>
+      </div>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <div class="nav-section nav-left">
+        <a href="index-es.html">Inicio<span></span></a>
+        <a href="about-es.html">Acerca de<span></span></a>
+        <a href="operation-es.html">Operaciones<span></span></a>
+        <a href="allproducts-es.html">Productos<span></span></a>
+        <a href="env-safety-es.html">Seguridad Ambiental<span></span></a>
+        <a href="Contact-es.html">Contacto<span></span></a>
+      </div>
+      <div class="nav-section nav-right">
+        <h2>Contáctanos</h2>
+        <p>Correo: info@zywieworldwide.com</p>
+        <p>Teléfono: +91 94271 85085</p>
+        <p>Dirección: Plot No 919, 3rd Phase, GIDC, Vapi 396195, Gujarat</p>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Categorías de Productos</h1>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid-container">
+      <div class="product-card">
+        <img src="img/generalProducts.jpg" alt="Productos Generales" />
+        <div class="card-title">Productos Generales</div>
+        <div class="card-overlay">
+          <a href="assests/productList.pdf" download class="download-btn">
+            ⬇ Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="img/Penicillin.jpg" alt="Cefalosporina y Penicilina" />
+        <div class="card-title">Cefalosporina y Penicilina</div>
+        <div class="card-overlay">
+          <a
+            href="assests/ProductList Penicillin.pdf"
+            download
+            class="download-btn"
+          >
+            ⬇ Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="img/injection.jpg" alt="Inyección General" />
+        <div class="card-title">Inyección General</div>
+        <div class="card-overlay">
+          <a href="assests/general Injection.pdf" download class="download-btn">
+            ⬇ Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="img/softgel.jpg" alt="Softgel OTC" />
+        <div class="card-title">Softgel OTC</div>
+        <div class="card-overlay">
+          <a href="assests/Softgel.pdf" download class="download-btn">
+            ⬇ Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="img/eye drop.jpg" alt="Gotas para Ojos y Oídos" />
+        <div class="card-title">Gotas para Ojos y Oídos</div>
+        <div class="card-overlay">
+          <a href="assests/eardrop.pdf" download class="download-btn">
+            ⬇ Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="img/oinment.jpg" alt="Pomada" />
+        <div class="card-title">Pomada</div>
+        <div class="card-overlay">
+          <a href="assests/Ointment.pdf" download class="download-btn">
+            ⬇ Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="img/blood.jpg" alt="Bolsa de Sangre" />
+        <div class="card-title">Bolsa de Sangre</div>
+        <div class="card-overlay">
+          <a href="assests/blood-bag.pdf" download class="download-btn">
+            ⬇ Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="img/derma.jpg" alt="Parches Dérmicos" />
+        <div class="card-title">Parches Dérmicos</div>
+        <div class="card-overlay">
+          <a href="assests/derma patch.pdf" download class="download-btn">
+            ⬇ Descargar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="img/surgical.jpg" alt="Desechables Quirúrgicos" />
+        <div class="card-title">Desechables Quirúrgicos</div>
+        <div class="card-overlay">
+          <a href="assests/surgical disposal.pdf" download class="download-btn">
+            ⬇ Descargar PDF
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h4>Zywie Worldwide</h4>
+            <p>
+              Conectando comunidades globales con soluciones innovadoras de atención médica.
+            </p><br>
+            <p><strong>Correo:</strong> info@zywieworldwide.com</p>
+            <p><strong>Teléfono:</strong> +91 94271 85085</p>
+            <p><strong>Dirección:</strong> Plot No 919, 3rd Phase, GIDC, Vapi 396195, Gujarat</p>
+          </div>
+          <div class="footer-links">
+            <a href="index-es.html" class="footer-link">Inicio</a>
+            <a href="about-es.html" class="footer-link">Conócenos</a>
+            <a href="operation-es.html" class="footer-link">Operaciones</a>
+            <a href="allproducts-es.html" class="footer-link">Productos</a>
+            <a href="env-safety-es.html" class="footer-link"
+              >Seguridad Ambiental</a
+            >
+            <a href="Contact-es.html" class="footer-link">Contacto</a>
+          </div>
+        </div>
+
+        <!-- Download All Products Button -->
+        <div class="footer-download">
+          <a href="assests/Product List Main.pdf" download class="download-btn">
+            ⬇ Descargar Todos los Productos
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script-es.js"></script>
+  </body>
+</html>
