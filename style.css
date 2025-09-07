@@ -68,6 +68,26 @@ body {
     }
 } */
 
+.language-section {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Space between language dropdown and hamburger menu */
+}
+
+.language-section select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.language-section select:focus {
+  border-color: #007bff;
+}
+
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -1463,4 +1483,5 @@ body {
     r: 20.5;
   }
 }
+
 
