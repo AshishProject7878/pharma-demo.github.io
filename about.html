@@ -94,6 +94,30 @@
       font-size: 1rem;
       margin-top: 5px;
     }
+
+    /* Hero */
+      .hero {
+        background: url("products.jpg") center/cover no-repeat;
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+      .hero h1 {
+        position: relative;
+        font-size: 2.8rem;
+        z-index: 2;
+      }
   </style>
   <body>
     <!-- -------------------------------------------- Navbar ----------- -->
@@ -118,15 +142,15 @@
       </div>
       <div class="nav-section nav-right">
         <h2>Contact Us</h2>
-        <p>Email: contact@zywie.com</p>
-        <p>Phone: +91 9876543210</p>
-        <p>Address: Mumbai, India</p>
+        <p>Email: info@zywieworldwide.com</p>
+        <p>Phone: +91 94271 85085</p>
+        <p>Address: Plot No 919, 3rd Phase, GIDC, Vapi 396195, Gujarat</p>
       </div>
     </div>
 
-    <!-- --------------- Section Label ---------------------- -->
-    <div class="section-label">
-      <h1>Know Us</h1>
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Product Categories</h1>
     </div>
 
     <!-- About content -->
@@ -173,9 +197,9 @@
               solutions.
             </p>
             <br />
-            <p><strong>Email:</strong> contact@zywie.com</p>
-            <p><strong>Phone:</strong> +91 9876543210</p>
-            <p><strong>Address:</strong> Mumbai, India</p>
+            <p><strong>Email:</strong> info@zywieworldwide.com</p>
+            <p><strong>Phone:</strong> +91 94271 85085</p>
+            <p><strong>Address:</strong> Plot No 919, 3rd Phase, GIDC, Vapi 396195, Gujarat</p>
           </div>
           <div class="footer-links">
             <a href="index.html" class="footer-link">Home</a>
@@ -230,6 +254,7 @@
     </script>
   </body>
 </html>
+
 
 
 
